@@ -9,6 +9,7 @@
 .mv-half + .mv-half{border-left:1px solid #000}
 .slide{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(1.08);transition:opacity 1.6s ease,transform 7s ease-out}
 .slide.on{opacity:1;transform:scale(1)}
+.js .mv:not(.is-ready) .slide{opacity:0;transform:scale(1.08)}
 .mv-veil{position:absolute;inset:0;background:rgba(0,0,0,.28);pointer-events:none}
 .mv-logo{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:min(560px,70%);text-align:center;pointer-events:none}
 .mv-logo img{width:100%;height:auto;margin:0 auto;filter:drop-shadow(0 4px 24px rgba(0,0,0,.55))}

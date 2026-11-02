@@ -35,6 +35,14 @@
         slide.classList.toggle('on', i === index % slides.length);
       });
     };
+    // Slides stay hidden (html.js .mv:not(.is-ready)) until the first frame,
+    // then the first photos fade/zoom in right after load.
+    var mv = document.querySelector('.mv');
+    window.requestAnimationFrame(function () {
+      window.requestAnimationFrame(function () {
+        mv.classList.add('is-ready');
+      });
+    });
     var tick = 0;
     // Left and right panels change alternately every 3 seconds.
     window.setInterval(function () {
