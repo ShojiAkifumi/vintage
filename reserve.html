@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ご予約 | Vintage</title>
+<meta name="description" content="Vintageのご予約。お電話またはWebフォームから承ります。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&amp;family=Shippori+Mincho:wght@400;500;600&amp;family=Noto+Sans+JP:wght@400;500&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/common.css">
+<link rel="stylesheet" href="assets/css/reserve.css">
+</head>
+<body>
+<div class="vt">
+
+<header class="hd">
+<div class="wrap hd-in">
+<a class="logo" href="index.html"><img src="assets/images/logo.png" alt="Vintage トップへ"></a>
+<nav class="nav" aria-label="メインメニュー">
+<a href="index.html">TOP</a>
+<a href="menu.html">メニュー</a>
+<a href="shop.html">店舗案内</a>
+<a href="news.html">お知らせ</a>
+<a class="tel" href="tel:03-xxxx-xxxx"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2"></path></svg>03-xxxx-xxxx</a>
+<a class="btn solid" href="reserve.html">ご予約</a>
+</nav>
+<button class="menu-btn" type="button" aria-label="メニューを開く" aria-expanded="false" aria-controls="sp-nav"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18"></path></svg></button>
+</div>
+<nav class="sp-nav" id="sp-nav" hidden aria-label="スマートフォンメニュー">
+<a href="index.html">TOP</a>
+<a href="menu.html">メニュー</a>
+<a href="shop.html">店舗案内</a>
+<a href="news.html">お知らせ</a>
+<a href="tel:03-xxxx-xxxx">TEL 03-xxxx-xxxx</a>
+<a class="btn solid" href="reserve.html">ご予約はこちら</a>
+</nav>
+</header>
+
+<section class="ph">
+<img src="assets/images/toast.jpg" alt="">
+<div class="veil"></div>
+<div class="in">
+<h1>Reservation</h1>
+<p>ご予約</p>
+</div>
+</section>
+
+<div class="wrap" style="padding-top: 96px; padding-bottom: 128px">
+
+<div class="ways">
+<div class="way">
+<p class="en">By Phone</p>
+<h2>お電話でのご予約</h2>
+<a class="tel-big" href="tel:03-xxxx-xxxx"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#C9A96E" stroke-width="1.3" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2"></path></svg>03-xxxx-xxxx</a>
+<p class="muted" style="margin: 16px 0 0; font-size: 13px">当日のご予約・貸切・アレルギーのご相談はお電話がスムーズです</p>
+</div>
+<div class="way">
+<p class="en">Web Form</p>
+<h2>Webでのご予約</h2>
+<p style="margin: 24px 0 0; color: #D9D3C9">下記フォームに必要事項をご入力ください。<br>内容を確認のうえ、お店よりご連絡いたします。</p>
+<a class="btn" href="#form" style="margin-top: 20px">フォームへ進む</a>
+</div>
+</div>
+
+<div class="layout" id="form">
+<div>
+<div class="done" id="reserve-done" role="status" tabindex="-1" hidden>
+<p style="margin: 0; font-family: 'Cormorant Garamond', serif; font-style: italic; color: #C9A96E; font-size: 22px">Merci beaucoup</p>
+<h2 style="font-family: 'Shippori Mincho', serif; font-weight: 500; font-size: 26px; letter-spacing: .12em; margin: 10px 0 0">ご予約リクエストを受け付けました</h2>
+<p style="margin: 18px 0 0; color: #D9D3C9">内容を確認のうえ、お店よりご連絡いたします。<br>ご連絡をもってご予約確定となります。</p>
+<dl>
+<dt>ご来店日</dt><dd data-field="date"></dd>
+<dt>時間</dt><dd data-field="time"></dd>
+<dt>人数</dt><dd data-field="people"></dd>
+<dt>コース</dt><dd data-field="course"></dd>
+<dt>お名前</dt><dd><span data-field="name"></span> 様</dd>
+</dl>
+<button class="btn" type="button" id="reserve-reset" style="margin-top: 36px">フォームに戻る</button>
+</div>
+<!-- TODO: 送信先（メールフォームサービス等）が決まったら action / method を設定してください -->
+<form class="form" id="reserve-form">
+<div class="fld">
+<label for="r-date">ご来店日<span class="req">必須</span></label>
+<input id="r-date" name="date" type="date" required="">
+<span class="hint">日曜・祝日は定休日です</span>
+</div>
+<div class="fld">
+<label for="r-time">ご来店時間<span class="req">必須</span></label>
+<select id="r-time" name="time" required="">
+<option value="">選択してください</option>
+<optgroup label="ランチ（平日のみ）">
+<option>11:30</option><option>12:00</option><option>12:30</option><option>13:00</option><option>13:30</option><option>14:00</option>
+</optgroup>
+<optgroup label="ディナー（平日・土曜）">
+<option>18:00</option><option>18:30</option><option>19:00</option><option>19:30</option><option>20:00</option><option>20:30</option><option>21:00</option><option>21:30</option>
+</optgroup>
+</select>
+</div>
+<div class="fld">
+<label for="r-people">人数<span class="req">必須</span></label>
+<select id="r-people" name="people" required="">
+<option value="">選択してください</option>
+<option>1名</option><option>2名</option><option>3名</option><option>4名</option><option>5名</option><option>6名</option><option>7名</option><option>8名</option><option>9名</option><option>10名</option>
+</select>
+<span class="hint">11名様以上・貸切はお電話にてご相談ください</span>
+</div>
+<div class="fld">
+<label for="r-course">コース<span class="req">必須</span></label>
+<select id="r-course" name="course" required="">
+<option value="">選択してください</option>
+<option>席のみ予約（当日注文）</option>
+<option>ランチコース A（1,650円）</option>
+<option>ランチコース B（3,300円）</option>
+<option>ランチコース C（5,500円）</option>
+<option>ディナーコース Vintage（11,000円）</option>
+</select>
+</div>
+<div class="fld">
+<label for="r-name">お名前<span class="req">必須</span></label>
+<input id="r-name" name="name" type="text" autocomplete="name" placeholder="例）山田 花子" required="">
+</div>
+<div class="fld">
+<label for="r-kana">フリガナ<span class="req">必須</span></label>
+<input id="r-kana" name="kana" type="text" placeholder="例）ヤマダ ハナコ" required="">
+</div>
+<div class="fld">
+<label for="r-tel">電話番号<span class="req">必須</span></label>
+<input id="r-tel" name="tel" type="tel" autocomplete="tel" placeholder="例）090-0000-0000" required="">
+</div>
+<div class="fld">
+<label for="r-mail">メールアドレス<span class="req">必須</span></label>
+<input id="r-mail" name="mail" type="email" autocomplete="email" placeholder="例）example@mail.com" required="">
+</div>
+<div class="fld full">
+<label for="r-scene">ご利用シーン<span class="opt">任意</span></label>
+<select id="r-scene" name="scene">
+<option value="">選択してください</option>
+<option>記念日・お誕生日</option><option>デート</option><option>女子会・ご友人と</option><option>ご家族と</option><option>接待・ビジネス</option><option>その他</option>
+</select>
+</div>
+<div class="fld full">
+<label for="r-note">アレルギー・ご要望<span class="opt">任意</span></label>
+<textarea id="r-note" name="note" placeholder="食物アレルギー、苦手な食材、ベジタリアン・ヴィーガンメニューのご希望、お子様連れ、記念日のご演出など"></textarea>
+</div>
+<label class="agree"><input type="checkbox" name="agree" required="">個人情報の取り扱いに同意する</label>
+<div class="submit"><button class="btn solid" type="submit">予約内容を送信する</button></div>
+</form>
+</div>
+
+<aside class="side">
+<div class="box hr">
+<h3>営業時間</h3>
+<p class="en">LUNCH</p>
+<p class="t">11:30 – 14:30</p>
+<p class="d">平日のみ ／ L.O. 14:00</p>
+<p class="en">DINNER</p>
+<p class="t">18:00 – 23:30</p>
+<p class="d" style="margin-bottom: 0">平日・土曜 ／ L.O. 22:00</p>
+<p class="muted" style="margin: 16px 0 0; font-size: 12px">定休日：日曜・祝日</p>
+</div>
+<div class="box">
+<h3>ご予約について</h3>
+<ul>
+<li>Webフォームからのお申し込みは、お店からのご連絡をもって確定となります。</li>
+<li>当日のご予約はお電話にてお願いいたします。</li>
+<li>アレルギー・苦手な食材はご予約時にお知らせください。</li>
+<li>貸切は立食30名様・着席16名様まで承ります。</li>
+</ul>
+</div>
+<div class="box" style="text-align: center">
+<p class="muted" style="margin: 0; font-size: 12px">お電話でのお問い合わせ</p>
+<a href="tel:03-xxxx-xxxx" style="font-family: 'Cormorant Garamond', serif; font-size: 30px; letter-spacing: .06em; text-decoration: none">03-xxxx-xxxx</a>
+</div>
+</aside>
+</div>
+</div>
+
+<footer class="ft">
+<div class="ft-main">
+<div class="ft-photo"><img src="assets/images/exterior.jpg" alt="夜のVintage外観"></div>
+<div class="ft-body">
+<a class="ft-logo" href="index.html"><img src="assets/images/logo.png" alt="Vintage トップへ"></a>
+<p class="ft-sub">RESTAURANT FRANÇAIS ／ AKASAKA</p>
+<dl class="ft-dl">
+<dt>住所</dt><dd>東京都港区赤坂x-xx-xx xxxxxx<br><a href="https://www.google.com/maps/search/?api=1&amp;query=%E6%9D%B1%E4%BA%AC%E9%83%BD%E6%B8%AF%E5%8C%BA%E8%B5%A4%E5%9D%82" target="_blank" rel="noopener">Googleマップで見る</a></dd>
+<dt>アクセス</dt><dd>千代田線「赤坂駅」5b出口 徒歩4分<br>銀座線「溜池山王駅」12番出口 徒歩4分</dd>
+<dt>ランチ</dt><dd>平日 11:30–14:30（L.O. 14:00）</dd>
+<dt>ディナー</dt><dd>平日・土 18:00–23:30（L.O. 22:00）</dd>
+<dt>定休日</dt><dd>日曜・祝日</dd>
+</dl>
+<div class="ft-acts">
+<a class="ft-tel" href="tel:03-xxxx-xxxx"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C9A96E" stroke-width="1.4" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2"></path></svg>03-xxxx-xxxx</a>
+<a class="btn solid" href="reserve.html">Webでご予約</a>
+</div>
+</div>
+</div>
+<nav class="ft-nav" aria-label="フッターメニュー">
+<a href="index.html">TOP</a>
+<a href="menu.html">メニュー</a>
+<a href="shop.html">店舗案内</a>
+<a href="news.html">お知らせ</a>
+<a href="reserve.html">ご予約</a>
+</nav>
+<p class="copy">© Vintage. All Rights Reserved.</p>
+</footer>
+
+</div>
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>

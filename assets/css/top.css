@@ -1,0 +1,68 @@
+/* Vintage | 赤坂のフランス料理レストラン */
+.eyebrow{font-family:'Cormorant Garamond',serif;font-style:italic;color:#C9A96E;font-size:22px;letter-spacing:.08em;line-height:1.2;margin:0}
+.h2{font-family:'Shippori Mincho',serif;font-weight:500;font-size:34px;line-height:1.5;margin:10px 0 0;letter-spacing:.14em}
+.sec-head{text-align:center;margin-bottom:64px}
+.sec-head .rule{width:40px;height:1px;background:#C9A96E;margin:24px auto 0}
+.sec{padding:128px 0}
+.mv{position:relative;height:860px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));overflow:hidden;background:#000}
+.mv-half{position:relative;overflow:hidden}
+.mv-half + .mv-half{border-left:1px solid #000}
+.slide{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(1.08);transition:opacity 1.6s ease,transform 7s ease-out}
+.slide.on{opacity:1;transform:scale(1)}
+.mv-veil{position:absolute;inset:0;background:rgba(0,0,0,.28);pointer-events:none}
+.mv-logo{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:min(560px,70%);text-align:center;pointer-events:none}
+.mv-logo img{width:100%;height:auto;margin:0 auto;filter:drop-shadow(0 4px 24px rgba(0,0,0,.55))}
+.mv-logo p{margin:18px 0 0;font-family:'Cormorant Garamond',serif;font-size:16px;letter-spacing:.42em;color:#EDE8E0;text-shadow:0 2px 12px rgba(0,0,0,.6)}
+.mv-scroll{position:absolute;left:50%;bottom:28px;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:10px;font-family:'Cormorant Garamond',serif;font-size:13px;letter-spacing:.3em;color:#EDE8E0}
+.mv-scroll span{display:block;width:1px;height:48px;background:rgba(237,232,224,.6)}
+.intro{padding:136px 0 40px;text-align:center}
+.intro .intro-copy{font-family:'Shippori Mincho',serif;font-weight:500;font-size:44px;line-height:1.7;letter-spacing:.16em;margin:24px 0 0}
+.intro .lead{font-size:16px;margin:32px auto 0;max-width:620px;color:#D9D3C9}
+.intro .acts{display:flex;flex-wrap:wrap;justify-content:center;gap:16px;margin-top:48px}
+@media (prefers-reduced-motion:reduce){.slide{transition:none;transform:none}}
+.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px}
+.card{background:#141414;border:1px solid #232323;display:flex;flex-direction:column}
+.card img{width:100%;height:280px;object-fit:cover}
+.card-b{padding:28px 28px 32px;display:flex;flex-direction:column;gap:10px;flex-grow:1}
+.tag{display:inline-block;align-self:flex-start;font-size:11px;letter-spacing:.2em;border:1px solid #C9A96E;color:#C9A96E;padding:2px 10px;line-height:1.8}
+.card h3{font-family:'Shippori Mincho',serif;font-weight:500;font-size:21px;line-height:1.6;margin:4px 0 0;letter-spacing:.08em}
+.price{font-family:'Cormorant Garamond',serif;font-size:26px;color:#C9A96E;letter-spacing:.04em;margin-top:auto}
+.price small{font-family:'Noto Sans JP',sans-serif;font-size:12px;color:#A39E95;margin-left:4px}
+.kd{display:flex;flex-direction:column;gap:120px}
+.kd-row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:72px;align-items:center}
+.kd-row img{width:100%;height:440px;object-fit:cover}
+.kd-row.rev .kd-img{order:2}
+.kd-num{font-family:'Cormorant Garamond',serif;font-size:72px;line-height:1;color:#C9A96E;margin:0}
+.kd-row h3{font-family:'Shippori Mincho',serif;font-weight:500;font-size:26px;line-height:1.65;margin:18px 0 0;letter-spacing:.1em}
+.kd-row p{margin:20px 0 0}
+.kd-sub{display:inline-block;margin-top:18px;font-family:'Cormorant Garamond',serif;font-size:18px;letter-spacing:.14em;color:#C9A96E}
+.gal{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-auto-rows:240px;gap:12px}
+.gal img{width:100%;height:100%;object-fit:cover}
+.gal .tall{grid-row:span 2}
+.gal .wide{grid-column:span 2}
+.news{border-top:1px solid #262626;margin:0;padding:0;list-style:none}
+.news li{border-bottom:1px solid #262626}
+.news a{display:grid;grid-template-columns:130px 110px minmax(0,1fr) 24px;gap:24px;align-items:center;padding:28px 8px;color:#EDE8E0;text-decoration:none}
+.news a:hover{color:#C9A96E}
+.news .date{font-family:'Cormorant Garamond',serif;font-size:19px;color:#A39E95;letter-spacing:.06em}
+.news .cat{font-size:11px;letter-spacing:.16em;border:1px solid #444;text-align:center;padding:2px 0;color:#CFC9BF}
+@media (max-width:960px){
+.sec{padding:88px 0}
+.h2{font-size:26px}
+.mv{height:640px;grid-template-columns:minmax(0,1fr);grid-template-rows:repeat(2,minmax(0,1fr))}
+.mv-half + .mv-half{border-left:0;border-top:1px solid #000}
+.mv-logo{width:78%}
+.mv-logo p{font-size:11px;letter-spacing:.22em;margin-top:10px}
+.intro{padding:88px 0 8px}
+.intro .intro-copy{font-size:26px}
+.intro .lead br{display:none}
+.kd-row{grid-template-columns:minmax(0,1fr);gap:40px}
+.kd{gap:80px}
+.kd-row img{height:280px}
+.kd-row.rev .kd-img{order:0}
+.cards{grid-template-columns:minmax(0,1fr)}
+.gal{grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:160px}
+.news a{grid-template-columns:auto auto;gap:8px 16px}
+.news a .ttl{grid-column:1 / -1}
+.news a svg{display:none}
+}

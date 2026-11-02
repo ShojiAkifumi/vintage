@@ -1,0 +1,50 @@
+/* ご予約 | Vintage */
+.ph{position:relative;height:360px;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden}
+.ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.ph .veil{position:absolute;inset:0;background:rgba(5,5,5,.7)}
+.ph .in{position:relative}
+.ph h1{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:72px;letter-spacing:.14em;line-height:1;margin:0}
+.ph p{margin:18px 0 0;font-family:'Shippori Mincho',serif;letter-spacing:.3em;font-size:15px}
+.ways{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.way{border:1px solid #2E2E2E;background:#121212;padding:40px 36px;text-align:center}
+.way .en{font-family:'Cormorant Garamond',serif;font-style:italic;color:#C9A96E;font-size:20px;margin:0;line-height:1.2}
+.way h2{font-family:'Shippori Mincho',serif;font-weight:500;font-size:22px;letter-spacing:.14em;margin:8px 0 0}
+.tel-big{display:inline-flex;align-items:center;gap:14px;font-family:'Cormorant Garamond',serif;font-size:42px;letter-spacing:.06em;color:#EDE8E0;text-decoration:none;line-height:1;margin-top:24px}
+.tel-big:hover{color:#C9A96E}
+.layout{display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:64px;align-items:start;margin-top:96px}
+.form{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 24px}
+.fld{display:flex;flex-direction:column;gap:10px}
+.fld.full{grid-column:1 / -1}
+.fld label{font-size:13px;letter-spacing:.12em;color:#EDE8E0}
+.fld label .req{font-size:10px;background:#C9A96E;color:#0B0B0B;padding:1px 6px;margin-left:8px;letter-spacing:.1em}
+.fld label .opt{font-size:10px;border:1px solid #555;color:#A39E95;padding:0 6px;margin-left:8px;letter-spacing:.1em}
+.fld input,.fld select,.fld textarea{font:inherit;font-size:15px;color:#EDE8E0;background:#141414;border:1px solid #3A3A3A;min-height:52px;padding:12px 16px;border-radius:0;width:100%;color-scheme:dark}
+.fld textarea{min-height:140px;resize:vertical}
+.fld input:focus,.fld select:focus,.fld textarea:focus{outline:2px solid #C9A96E;outline-offset:1px;border-color:#C9A96E}
+.fld .hint{font-size:12px;color:#A39E95}
+.agree{grid-column:1 / -1;display:flex;align-items:center;gap:12px;font-size:14px}
+.agree input{width:20px;height:20px;accent-color:#C9A96E}
+.submit{grid-column:1 / -1;display:flex;justify-content:center;margin-top:12px}
+.submit .btn{min-width:280px;min-height:56px;font-size:15px}
+.side{display:flex;flex-direction:column;gap:20px}
+.side .box{border:1px solid #2E2E2E;background:#121212;padding:28px}
+.side h3{font-family:'Shippori Mincho',serif;font-weight:500;font-size:17px;letter-spacing:.14em;margin:0 0 12px}
+.side ul{margin:0;padding-left:1.2em;font-size:13px;color:#CFC9BF}
+.side li{margin-bottom:6px}
+.hr .en{font-family:'Cormorant Garamond',serif;color:#C9A96E;letter-spacing:.2em;font-size:16px;margin:0}
+.hr .t{font-family:'Cormorant Garamond',serif;font-size:26px;margin:0;line-height:1.3}
+.hr .d{font-size:12px;color:#A39E95;margin:0 0 14px}
+.done{border:1px solid #C9A96E;background:#121212;padding:56px 48px;text-align:center}
+.done dl{display:grid;grid-template-columns:140px minmax(0,1fr);text-align:left;max-width:520px;margin:32px auto 0;border-top:1px solid #2A2A2A}
+.done dt,.done dd{margin:0;padding:12px 0;border-bottom:1px solid #2A2A2A;font-size:14px}
+.done dt{color:#C9A96E;letter-spacing:.12em}
+@media (max-width:960px){
+.ph{height:260px}
+.ph h1{font-size:48px}
+.ways,.layout,.form{grid-template-columns:minmax(0,1fr)}
+.layout{margin-top:64px;gap:48px}
+.tel-big{font-size:32px}
+.done{padding:40px 20px}
+.done dl{grid-template-columns:96px minmax(0,1fr)}
+.submit .btn{width:100%;min-width:0}
+}

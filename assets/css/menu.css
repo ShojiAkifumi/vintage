@@ -1,0 +1,50 @@
+/* メニュー | Vintage */
+.eyebrow{font-family:'Cormorant Garamond',serif;font-style:italic;color:#C9A96E;font-size:22px;letter-spacing:.08em;line-height:1.2;margin:0}
+.h2{font-family:'Shippori Mincho',serif;font-weight:500;font-size:34px;line-height:1.5;margin:10px 0 0;letter-spacing:.14em}
+.sec-head{text-align:center;margin-bottom:64px}
+.sec-head .rule{width:40px;height:1px;background:#C9A96E;margin:24px auto 0}
+.sec{padding:120px 0}
+.ph{position:relative;height:420px;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden}
+.ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.ph .veil{position:absolute;inset:0;background:rgba(5,5,5,.66)}
+.ph .in{position:relative}
+.ph h1{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:72px;letter-spacing:.14em;line-height:1;margin:0}
+.ph p{margin:18px 0 0;font-family:'Shippori Mincho',serif;letter-spacing:.3em;font-size:15px}
+.tabs{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;padding:40px 0;border-bottom:1px solid #222}
+.tabs a{display:inline-flex;align-items:center;min-height:44px;padding:0 24px;border:1px solid #333;color:#EDE8E0;text-decoration:none;font-size:14px;letter-spacing:.14em}
+.tabs a:hover{border-color:#C9A96E;color:#C9A96E}
+.courses{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px}
+.course{border:1px solid #2E2E2E;background:#121212;padding:40px 32px;display:flex;flex-direction:column}
+.course .en{font-family:'Cormorant Garamond',serif;font-size:15px;letter-spacing:.24em;color:#C9A96E;margin:0}
+.course h3{font-family:'Shippori Mincho',serif;font-weight:500;font-size:24px;letter-spacing:.1em;margin:8px 0 0;line-height:1.5}
+.course .pr{font-family:'Cormorant Garamond',serif;font-size:38px;color:#C9A96E;line-height:1.2;margin:16px 0 0}
+.course .pr small{font-family:'Noto Sans JP',sans-serif;font-size:12px;color:#A39E95;margin-left:6px}
+.course .desc{font-size:14px;color:#CFC9BF;margin:16px 0 0}
+.course ul{list-style:none;margin:24px 0 0;padding:24px 0 0;border-top:1px solid #2A2A2A;font-size:14px}
+.course li{padding:4px 0}
+.course li .ch{display:block;color:#A39E95;font-size:13px;padding-left:1em}
+.course .meta{margin-top:auto;padding-top:24px;font-size:12px;color:#A39E95;letter-spacing:.08em}
+.tag{display:inline-block;font-size:11px;letter-spacing:.16em;border:1px solid #C9A96E;color:#C9A96E;padding:1px 10px;margin-right:6px}
+.cats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:56px 72px}
+.cat h3{font-family:'Shippori Mincho',serif;font-weight:500;font-size:20px;letter-spacing:.14em;margin:0 0 12px;padding-bottom:12px;border-bottom:1px solid #C9A96E;display:flex;justify-content:space-between;align-items:baseline}
+.cat h3 span{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:17px;color:#C9A96E;letter-spacing:.06em}
+.ml{list-style:none;margin:0;padding:0}
+.ml li{display:flex;justify-content:space-between;align-items:baseline;gap:20px;padding:14px 0;border-bottom:1px dotted #333}
+.ml .nm{font-size:15px}
+.ml .nm small{display:block;font-size:12px;color:#A39E95;letter-spacing:.06em}
+.ml .yen{font-family:'Cormorant Garamond',serif;font-size:21px;white-space:nowrap;color:#EDE8E0}
+.ml .yen small{font-family:'Noto Sans JP',sans-serif;font-size:11px;color:#A39E95;margin-right:6px}
+.feat{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0;background:#121212;border:1px solid #2E2E2E}
+.feat img{width:100%;height:100%;min-height:420px;object-fit:cover}
+.feat .b{padding:56px 56px}
+.note{font-size:13px;color:#A39E95;text-align:center;margin:56px 0 0}
+@media (max-width:960px){
+.sec{padding:80px 0}
+.h2{font-size:26px}
+.ph{height:280px}
+.ph h1{font-size:48px}
+.courses,.cats,.feat{grid-template-columns:minmax(0,1fr)}
+.cats{gap:48px}
+.feat img{min-height:260px}
+.feat .b{padding:36px 24px}
+}
