@@ -41,6 +41,7 @@
 .gal img{width:100%;height:100%;object-fit:cover}
 .gal .tall{grid-row:span 2}
 .gal .wide{grid-column:span 2}
+.gal .big{grid-column:span 2;grid-row:span 2}
 .news{border-top:1px solid #262626;margin:0;padding:0;list-style:none}
 .news li{border-bottom:1px solid #262626}
 .news a{display:grid;grid-template-columns:130px 110px minmax(0,1fr) 24px;gap:24px;align-items:center;padding:28px 8px;color:#EDE8E0;text-decoration:none}
